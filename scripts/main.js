@@ -17,3 +17,14 @@ axios.get("https://random.dog/woof.json?filter=mp4,webm").then((response) => {
 });
 
 // -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+// PART 2: Creating Your Own ES6 Module
+// PART 2a: Default Exports and Imports
+
+// Q3...import the default export from your toolbelt.js module. You will have to choose a name for it when you import it. Try printing the value that you imported using console.log. Confirm that it is the same array of tool names that you exported from your module! - slide 24 - 26
+import favTools from "./utils/toolbelt.js";
+console.log(favTools);
+
+console.group("PART 2: Default Exports and Imports");
+console.log("1. Imported default with fave tools:", favTools);
+console.table(favTools);
+console.groupEnd();
