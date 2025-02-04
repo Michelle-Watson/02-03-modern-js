@@ -15,3 +15,5 @@ axios.get("https://random.dog/woof.json?filter=mp4,webm").then((response) => {
   const randomDog = response.data.url;
   dogImage.src = randomDog;
 });
+
+// -=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
