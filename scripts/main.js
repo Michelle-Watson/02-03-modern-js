@@ -67,3 +67,9 @@ constructionRenamed();
 console.log("3. businessRenamed Object:");
 console.table(businessRenamed);
 console.groupEnd();
+
+// Q5. Try using destructuring on the 'business' object you imported, to concisely pull out the values into individual variables
+let { name, address, phone } = businessRenamed;
+console.group("PART 2d: Destructuring imported objects:");
+console.log("Name of business:", name);
+console.groupEnd();
