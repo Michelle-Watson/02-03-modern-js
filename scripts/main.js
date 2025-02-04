@@ -73,3 +73,11 @@ let { name, address, phone } = businessRenamed;
 console.group("PART 2d: Destructuring imported objects:");
 console.log("Name of business:", name);
 console.groupEnd();
+
+// PART 3: Bonus: Importing All Named Exports
+import * as toolbelt from "./utils/toolbelt.js";
+
+let { name2, address2, phone2 } = toolbelt.business;
+console.group("PART 3: Accessing:");
+console.log("Address of business:", address2);
+console.groupEnd();
