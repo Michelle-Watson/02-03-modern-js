@@ -22,9 +22,29 @@ axios.get("https://random.dog/woof.json?filter=mp4,webm").then((response) => {
 
 // Q3...import the default export from your toolbelt.js module. You will have to choose a name for it when you import it. Try printing the value that you imported using console.log. Confirm that it is the same array of tool names that you exported from your module! - slide 24 - 26
 import favTools from "./utils/toolbelt.js";
-console.log(favTools);
 
-console.group("PART 2: Default Exports and Imports");
+console.group("PART 2a: Default Exports and Imports");
 console.log("1. Imported default with fave tools:", favTools);
 console.table(favTools);
+console.groupEnd();
+
+// PART 2b: Named Exports and Imports
+// Q1. Augment your original ‘toolbelt’ import statement so that you are also importing the two named exports we just created
+import favToolsImport, { construction, business } from "./utils/toolbelt.js";
+
+console.group("PART 2b: Named Exports and Imports");
+
+// Log the imported values to check if everything is working correctly
+console.log("1. Import all defaults:");
+console.log("1. favToolsImport:", favToolsImport);
+console.table(favToolsImport); // Displaying the imported array in a table
+
+// Q2. Try calling the construction() function to confirm that it was imported correctly. You should see 'CLANG!' printed to the console
+console.log("2. Construction function:");
+construction(); // This will print "CLANG!" to the console
+
+// Q3. Use console.log() to print the named 'business' import that you just imported. Confirm that it was imported correctly by viewing it printed in the console
+console.log("3. Business Object:");
+console.table(business); // This will print the business object in a table format
+
 console.groupEnd();
