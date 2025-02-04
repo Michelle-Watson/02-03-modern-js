@@ -35,16 +35,35 @@ import favToolsImport, { construction, business } from "./utils/toolbelt.js";
 console.group("PART 2b: Named Exports and Imports");
 
 // Log the imported values to check if everything is working correctly
-console.log("1. Import all defaults:");
+console.log("Import all defaults:");
 console.log("1. favToolsImport:", favToolsImport);
-console.table(favToolsImport); // Displaying the imported array in a table
+console.table(favToolsImport);
 
 // Q2. Try calling the construction() function to confirm that it was imported correctly. You should see 'CLANG!' printed to the console
 console.log("2. Construction function:");
-construction(); // This will print "CLANG!" to the console
+construction();
 
 // Q3. Use console.log() to print the named 'business' import that you just imported. Confirm that it was imported correctly by viewing it printed in the console
 console.log("3. Business Object:");
-console.table(business); // This will print the business object in a table format
+console.table(business);
 
+console.groupEnd();
+
+// PART 2c: RENamed Exports and Imports
+import favToolsImportRENAMED, {
+  construction as constructionRenamed,
+  business as businessRenamed,
+} from "./utils/toolbelt.js";
+
+console.group("PART 2c: RENamed Exports and Imports");
+
+console.log("Import all RENAMED defaults:");
+console.log("1. favToolsImportRENAMED:", favToolsImportRENAMED);
+console.table(favToolsImportRENAMED);
+
+console.log("2. constructionRenamed function:");
+constructionRenamed();
+
+console.log("3. businessRenamed Object:");
+console.table(businessRenamed);
 console.groupEnd();
